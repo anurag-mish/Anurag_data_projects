@@ -1,0 +1,1324 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "FROM-- base gs URL: gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data\n%hive\nUSE default;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:05:03+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Error while compiling statement: FAILED: ParseException line 2:0 cannot recognize input near '%' 'hive' 'USE'"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739302654750_1438451741",
+      "id": "paragraph_1739302654750_1438451741",
+      "dateCreated": "2025-02-11T19:37:34+0000",
+      "dateStarted": "2025-02-11T19:42:50+0000",
+      "dateFinished": "2025-02-11T19:42:59+0000",
+      "status": "ERROR",
+      "focus": true,
+      "$$hashKey": "object:47851"
+    },
+    {
+      "text": "%hive\nUSE default;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T19:45:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739302970337_1966581646",
+      "id": "paragraph_1739302970337_1966581646",
+      "dateCreated": "2025-02-11T19:42:50+0000",
+      "dateStarted": "2025-02-11T19:45:06+0000",
+      "dateFinished": "2025-02-11T19:45:07+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47852"
+    },
+    {
+      "text": "%hive\n-- DROP TABLE IF EXISTS ratings\nCREATE EXTERNAL TABLE ratings(\n    userid INT,\n    movieid INT,\n    rating INT,\n    tstamp STRING\n) ROW FORMAT DELIMITED\nFIELDS TERMINATED BY '#'\nSTORED AS TEXTFILE\nLOCATION 'gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data/ratings'",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T19:49:40+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211194940_3a716a9a-6e05-4b16-9d47-e77dcbf7989c): \n\nCREATE EXTERNAL TABLE ratings(\n    userid INT,\n    movieid INT,\n    rating INT,\n    tstamp STRING\n) ROW FORMAT DELIMITED\nFIELDS TERMINATED BY '#'\nSTORED AS TEXTFILE\nLOCATION 'gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data/ratings'\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211194940_3a716a9a-6e05-4b16-9d47-e77dcbf7989c); Time taken: 1.16 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20250211194940_3a716a9a-6e05-4b16-9d47-e77dcbf7989c): \n\nCREATE EXTERNAL TABLE ratings(\n    userid INT,\n    movieid INT,\n    rating INT,\n    tstamp STRING\n) ROW FORMAT DELIMITED\nFIELDS TERMINATED BY '#'\nSTORED AS TEXTFILE\nLOCATION 'gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data/ratings'\nINFO  : Starting task [Stage-0:DDL] in serial mode\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739303106505_1381470686",
+      "id": "paragraph_1739303106505_1381470686",
+      "dateCreated": "2025-02-11T19:45:06+0000",
+      "dateStarted": "2025-02-11T19:49:40+0000",
+      "dateFinished": "2025-02-11T19:49:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47853"
+    },
+    {
+      "text": "%hive\nSELECT * FROM ratings LIMIT 10;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T19:50:54+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "userid": "string",
+                      "movieid": "string",
+                      "rating": "string",
+                      "tstamp": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211195049_8c9e94dc-5952-4fcb-aa94-35eafcc96c2b): \nSELECT * FROM ratings LIMIT 10\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:ratings.userid, type:int, comment:null), FieldSchema(name:ratings.movieid, type:int, comment:null), FieldSchema(name:ratings.rating, type:int, comment:null), FieldSchema(name:ratings.tstamp, type:string, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211195049_8c9e94dc-5952-4fcb-aa94-35eafcc96c2b); Time taken: 3.636 seconds\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "userid\tmovieid\trating\ttstamp\n1\t1193\t5\t978300760\n1\t661\t3\t978302109\n1\t914\t3\t978301968\n1\t3408\t4\t978300275\n1\t2355\t5\t978824291\n1\t1197\t3\t978302268\n1\t1287\t5\t978302039\n1\t2804\t5\t978300719\n1\t594\t4\t978302268\n1\t919\t4\t978301368\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739303141366_397747678",
+      "id": "paragraph_1739303141366_397747678",
+      "dateCreated": "2025-02-11T19:45:41+0000",
+      "dateStarted": "2025-02-11T19:50:48+0000",
+      "dateFinished": "2025-02-11T19:50:53+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47854"
+    },
+    {
+      "text": "%hive\n-- DROP TABLE IF EXISTS mov;\n\nCREATE EXTERNAL TABLE mov (\n    movieid INT,\n    title STRING,\n    genres ARRAY<STRING>\n) ROW FORMAT DELIMITED\nFIELDS TERMINATED BY '#'\nCOLLECTION ITEMS Terminated BY '|'\nSTORED AS TEXTFILE\nLOCATION 'gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data/movies'",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T19:53:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739303448917_666714497",
+      "id": "paragraph_1739303448917_666714497",
+      "dateCreated": "2025-02-11T19:50:48+0000",
+      "dateStarted": "2025-02-11T19:53:44+0000",
+      "dateFinished": "2025-02-11T19:53:45+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47855"
+    },
+    {
+      "text": "%hive\nSELECT * FROM mov LIMIT 10;\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T19:54:09+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "movieid": "string",
+                      "title": "string",
+                      "genres": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211195407_5f4bd292-9254-4446-b865-9fd114f1314c): \nSELECT * FROM mov LIMIT 10\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:mov.movieid, type:int, comment:null), FieldSchema(name:mov.title, type:string, comment:null), FieldSchema(name:mov.genres, type:array<string>, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211195407_5f4bd292-9254-4446-b865-9fd114f1314c); Time taken: 0.499 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20250211195407_5f4bd292-9254-4446-b865-9fd114f1314c): \nSELECT * FROM mov LIMIT 10\nINFO  : Completed executing command(queryId=hive_20250211195407_5f4bd292-9254-4446-b865-9fd114f1314c); Time taken: 0.003 seconds\nINFO  : OK\nINFO  : Concurrency mode is disabled, not creating a lock manager\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "movieid\ttitle\tgenres\n1\tToy Story (1995)\t[\"Animation\",\"Children's\",\"Comedy\"]\n2\tJumanji (1995)\t[\"Adventure\",\"Children's\",\"Fantasy\"]\n3\tGrumpier Old Men (1995)\t[\"Comedy\",\"Romance\"]\n4\tWaiting to Exhale (1995)\t[\"Comedy\",\"Drama\"]\n5\tFather of the Bride Part II (1995)\t[\"Comedy\"]\n6\tHeat (1995)\t[\"Action\",\"Crime\",\"Thriller\"]\n7\tSabrina (1995)\t[\"Comedy\",\"Romance\"]\n8\tTom and Huck (1995)\t[\"Adventure\",\"Children's\"]\n9\tSudden Death (1995)\t[\"Action\"]\n10\tGoldenEye (1995)\t[\"Action\",\"Adventure\",\"Thriller\"]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739303624835_1884378050",
+      "id": "paragraph_1739303624835_1884378050",
+      "dateCreated": "2025-02-11T19:53:44+0000",
+      "dateStarted": "2025-02-11T19:54:07+0000",
+      "dateFinished": "2025-02-11T19:54:08+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47856"
+    },
+    {
+      "text": "%hive\n-- extract year from movie title into a separate column called year\n-- DROP TABLE IF EXISTS movies\n\nCREATE TABLE movies AS\nSELECT *,regexp_replace(split(title,'\\\\(')[1], '[^0-9]', '') AS year\nFROM mov;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T19:57:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211195743_fe7792f2-d5ba-4f7e-a11a-907c36223b19): \n\n\n\nCREATE TABLE movies AS\nSELECT *,regexp_replace(split(title,'\\\\(')[1], '[^0-9]', '') AS year\nFROM mov\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:mov.movieid, type:int, comment:null), FieldSchema(name:mov.title, type:string, comment:null), FieldSchema(name:mov.genres, type:array<string>, comment:null), FieldSchema(name:year, type:string, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211195743_fe7792f2-d5ba-4f7e-a11a-907c36223b19); Time taken: 1.415 seconds\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739303647292_617172009",
+      "id": "paragraph_1739303647292_617172009",
+      "dateCreated": "2025-02-11T19:54:07+0000",
+      "dateStarted": "2025-02-11T19:57:43+0000",
+      "dateFinished": "2025-02-11T19:58:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47857"
+    },
+    {
+      "text": "%hive\n-- display a sample of rows\nSELECT * FROM movies LIMIT 10;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T19:58:37+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "movieid": "string",
+                      "title": "string",
+                      "genres": "string",
+                      "year": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "movieid\ttitle\tgenres\tyear\n1\tToy Story (1995)\t[\"Animation\",\"Children's\",\"Comedy\"]\t1995\n2\tJumanji (1995)\t[\"Adventure\",\"Children's\",\"Fantasy\"]\t1995\n3\tGrumpier Old Men (1995)\t[\"Comedy\",\"Romance\"]\t1995\n4\tWaiting to Exhale (1995)\t[\"Comedy\",\"Drama\"]\t1995\n5\tFather of the Bride Part II (1995)\t[\"Comedy\"]\t1995\n6\tHeat (1995)\t[\"Action\",\"Crime\",\"Thriller\"]\t1995\n7\tSabrina (1995)\t[\"Comedy\",\"Romance\"]\t1995\n8\tTom and Huck (1995)\t[\"Adventure\",\"Children's\"]\t1995\n9\tSudden Death (1995)\t[\"Action\"]\t1995\n10\tGoldenEye (1995)\t[\"Action\",\"Adventure\",\"Thriller\"]\t1995\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739303863184_8991914",
+      "id": "paragraph_1739303863184_8991914",
+      "dateCreated": "2025-02-11T19:57:43+0000",
+      "dateStarted": "2025-02-11T19:58:36+0000",
+      "dateFinished": "2025-02-11T19:58:36+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47858"
+    },
+    {
+      "text": "%hive\n-- load users data from google storage into a users table in Hive (on HDFS)\n-- DROP TABLE IF EXISTS users;\n\nCreate EXTERNAL TABLE users(\n    userid INT,\n    gender STRING,\n    ageid INT,\n    occupationid INT,\n    zipcode STRING\n) ROW FORMAT DELIMITED\nFIELDS TERMINATED BY '#'\nSTORED AS TEXTFILE\nLOCATION 'gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data/users'",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:02:06+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739303899536_1813495939",
+      "id": "paragraph_1739303899536_1813495939",
+      "dateCreated": "2025-02-11T19:58:19+0000",
+      "dateStarted": "2025-02-11T20:02:06+0000",
+      "dateFinished": "2025-02-11T20:02:08+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47859"
+    },
+    {
+      "text": "%hive\n-- display a sample of rows\nSELECT * FROM users LIMIT 10;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:02:39+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "userid": "string",
+                      "gender": "string",
+                      "ageid": "string",
+                      "occupationid": "string",
+                      "zipcode": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "userid\tgender\tageid\toccupationid\tzipcode\n1\tF\t1\t10\t48067\n2\tM\t56\t16\t70072\n3\tM\t25\t15\t55117\n4\tM\t45\t7\t02460\n5\tM\t25\t20\t55455\n6\tF\t50\t9\t55117\n7\tM\t35\t1\t06810\n8\tM\t25\t12\t11413\n9\tM\t25\t17\t61614\n10\tF\t35\t1\t95370\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304126799_543085315",
+      "id": "paragraph_1739304126799_543085315",
+      "dateCreated": "2025-02-11T20:02:06+0000",
+      "dateStarted": "2025-02-11T20:02:36+0000",
+      "dateFinished": "2025-02-11T20:02:37+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47860"
+    },
+    {
+      "text": "%hive\n-- DROP TABLE IF EXISTS occupations\n\nCREATE EXTERNAL TABLE occupations (\n    occupationid INT,\n    occupation STRING\n) ROW FORMAT DELIMITED\nFIELDS TERMINATED BY '#'\nSTORED AS TEXTFILE\nLOCATION 'gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data/occupations'",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:04:29+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304156507_1800092030",
+      "id": "paragraph_1739304156507_1800092030",
+      "dateCreated": "2025-02-11T20:02:36+0000",
+      "dateStarted": "2025-02-11T20:04:29+0000",
+      "dateFinished": "2025-02-11T20:04:30+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47861"
+    },
+    {
+      "text": "%hive\n-- display a sample of rows\nSELECT * FROM occupations LIMIT 10;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:05:31+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "occupationid": "string",
+                      "occupation": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "occupationid\toccupation\n0\tother/not specified\n1\tacademic/educator\n2\tartist\n3\tclerical/admin\n4\tcollege/grad student\n5\tcustomer service\n6\tdoctor/health care\n7\texecutive/managerial\n8\tfarmer\n9\thomemaker\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304269415_1605744162",
+      "id": "paragraph_1739304269415_1605744162",
+      "dateCreated": "2025-02-11T20:04:29+0000",
+      "dateStarted": "2025-02-11T20:05:29+0000",
+      "dateFinished": "2025-02-11T20:05:30+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47862"
+    },
+    {
+      "text": "%hive\n-- DROP TABLE IF EXISTS ages\n\nCREATE EXTERNAL TABLE ages(\n    ageid INT,\n    agerange STRING\n) ROW FORMAT DELIMITED\nFIELDS TERMINATED by '#'\nSTORED AS TEXTFILE\nLOCATION 'gs://amishr96_data_for_gcp_labs/data_for_hive_lab/data/ages'",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:07:20+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304329177_1326267814",
+      "id": "paragraph_1739304329177_1326267814",
+      "dateCreated": "2025-02-11T20:05:29+0000",
+      "dateStarted": "2025-02-11T20:07:20+0000",
+      "dateFinished": "2025-02-11T20:07:21+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47863"
+    },
+    {
+      "text": "%hive\n-- display a sample of rows\nSELECT * FROM ages LIMIT 10;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:07:48+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "ageid": "string",
+                      "agerange": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211200746_8be9d5c2-1444-45d0-a11a-8709f19e20a5): \n\nSELECT * FROM ages LIMIT 10\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:ages.ageid, type:int, comment:null), FieldSchema(name:ages.agerange, type:string, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211200746_8be9d5c2-1444-45d0-a11a-8709f19e20a5); Time taken: 0.613 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20250211200746_8be9d5c2-1444-45d0-a11a-8709f19e20a5): \n\nSELECT * FROM ages LIMIT 10\nINFO  : Completed executing command(queryId=hive_20250211200746_8be9d5c2-1444-45d0-a11a-8709f19e20a5); Time taken: 0.003 seconds\nINFO  : OK\nINFO  : Concurrency mode is disabled, not creating a lock manager\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "ageid\tagerange\n1\t<18\n18\t18-24\n25\t25-34\n35\t35-44\n45\t45-49\n50\t50-55\n56\t>=56\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304440330_1157574854",
+      "id": "paragraph_1739304440330_1157574854",
+      "dateCreated": "2025-02-11T20:07:20+0000",
+      "dateStarted": "2025-02-11T20:07:46+0000",
+      "dateFinished": "2025-02-11T20:07:47+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47864"
+    },
+    {
+      "text": "%hive\n-- join movies, ratings, users, occupations, ages tables into a single RMUdata table\n-- DROP TABLE IF EXISTS RMUdata\nCREATE TABLE RMUdata\nAS\nSELECT\nr.userid,r.movieid, r.rating, r.tstamp,\nm.title, m.year, m.genres,\nu.gender,a.agerange, u.zipcode, o.occupation\nFROM\nratings r\nLEFT JOIN movies m ON (r.movieid = m.movieid)\nLEFT JOIN users u ON (r.userid = u.userid)\nLEFT JOIN ages a ON (u.ageid = a.ageid)\nLEFT JOIN occupations o ON (u.occupationid = o.occupationid);\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:19:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211201943_1280f37b-8ade-4f8b-bb48-49ad88c40630): \n\n\nCREATE TABLE RMUdata\nAS\nSELECT\nr.userid,r.movieid, r.rating, r.tstamp,\nm.title, m.year, m.genres,\nu.gender,a.agerange, u.zipcode, o.occupation\nFROM\nratings r\nLEFT JOIN movies m ON (r.movieid = m.movieid)\nLEFT JOIN users u ON (r.userid = u.userid)\nLEFT JOIN ages a ON (u.ageid = a.ageid)\nLEFT JOIN occupations o ON (u.occupationid = o.occupationid)\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : No Stats for default@ratings, Columns: tstamp, rating, movieid, userid\nINFO  : No Stats for default@movies, Columns: year, genres, movieid, title\nINFO  : No Stats for default@users, Columns: zipcode, gender, occupationid, userid, ageid\nINFO  : No Stats for default@ages, Columns: ageid, agerange\nINFO  : No Stats for default@occupations, Columns: occupation, occupationid\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:r.userid, type:int, comment:null), FieldSchema(name:r.movieid, type:int, comment:null), FieldSchema(name:r.rating, type:int, comment:null), FieldSchema(name:r.tstamp, type:string, comment:null), FieldSchema(name:m.title, type:string, comment:null), FieldSchema(name:m.year, type:string, comment:null), FieldSchema(name:m.genres, type:array<string>, comment:null), FieldSchema(name:u.gender, type:string, comment:null), FieldSchema(name:a.agerange, type:string, comment:null), FieldSchema(name:u.zipcode, type:string, comment:null), FieldSchema(name:o.occupation, type:string, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211201943_1280f37b-8ade-4f8b-bb48-49ad88c40630); Time taken: 1.594 seconds\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304466310_380313394",
+      "id": "paragraph_1739304466310_380313394",
+      "dateCreated": "2025-02-11T20:07:46+0000",
+      "dateStarted": "2025-02-11T20:19:43+0000",
+      "dateFinished": "2025-02-11T20:21:19+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47865"
+    },
+    {
+      "text": "%hive\nSELECT * FROM RMUdata LIMIT 100;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:21:26+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "userid": "string",
+                      "movieid": "string",
+                      "rating": "string",
+                      "tstamp": "string",
+                      "title": "string",
+                      "year": "string",
+                      "genres": "string",
+                      "gender": "string",
+                      "agerange": "string",
+                      "zipcode": "string",
+                      "occupation": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "userid\tmovieid\trating\ttstamp\ttitle\tyear\tgenres\tgender\tagerange\tzipcode\toccupation\n5853\t2054\t1\t957748528\tHoney, I Shrunk the Kids (1989)\t1989\t[\"Adventure\",\"Children's\",\"Comedy\",\"Fantasy\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t2454\t4\t957748350\tFly, The (1958)\t1958\t[\"Horror\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t249\t4\t957746967\tImmortal Beloved (1994)\t1994\t[\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2108\t4\t957747702\tL.A. Story (1991)\t1991\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1199\t5\t957748220\tBrazil (1985)\t1985\t[\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1580\t3\t957748293\tMen in Black (1997)\t1997\t[\"Action\",\"Adventure\",\"Comedy\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t3543\t3\t957747068\tDiner (1982)\t1982\t[\"Comedy\",\"Drama\"]\tM\t50-55\t13903\tunemployed\n5853\t356\t3\t957747763\tForrest Gump (1994)\t1994\t[\"Comedy\",\"Romance\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t1210\t2\t957746933\tStar Wars: Episode VI - Return of the Jedi (1983)\t1983\t[\"Action\",\"Adventure\",\"Romance\",\"Sci-Fi\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t1214\t5\t957748250\tAlien (1979)\t1979\t[\"Action\",\"Horror\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1240\t5\t957748315\tTerminator, The (1984)\t1984\t[\"Action\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1248\t5\t957747282\tTouch of Evil (1958)\t1958\t[\"Crime\",\"Film-Noir\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1265\t4\t957747526\tGroundhog Day (1993)\t1993\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1281\t5\t957747131\tGreat Dictator, The (1940)\t1940\t[\"Comedy\"]\tM\t50-55\t13903\tunemployed\n5853\t750\t5\t957748220\tDr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)\t1963\t[\"Sci-Fi\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t1680\t1\t957747636\tSliding Doors (1998)\t1998\t[\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2692\t5\t957747436\tRun Lola Run (Lola rennt) (1998)\t\t[\"Action\",\"Crime\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2364\t3\t957748470\tGodzilla (Gojira) (1984)\t\t[\"Action\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t899\t1\t957747418\tSingin' in the Rain (1952)\t1952\t[\"Musical\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2010\t5\t957748220\tMetropolis (1926)\t1926\t[\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t912\t4\t957747386\tCasablanca (1942)\t1942\t[\"Drama\",\"Romance\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t1196\t5\t957748250\tStar Wars: Episode V - The Empire Strikes Back (1980)\t1980\t[\"Action\",\"Adventure\",\"Drama\",\"Sci-Fi\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t2186\t5\t957747282\tStrangers on a Train (1951)\t1951\t[\"Film-Noir\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t2529\t3\t957748395\tPlanet of the Apes (1968)\t1968\t[\"Action\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1408\t4\t957747877\tLast of the Mohicans, The (1992)\t1992\t[\"Action\",\"Romance\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t2065\t3\t957747636\tPurple Rose of Cairo, The (1985)\t1985\t[\"Comedy\",\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t3099\t3\t957747618\tShampoo (1975)\t1975\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1286\t1\t957747813\tSomewhere in Time (1980)\t1980\t[\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2243\t5\t957747511\tBroadcast News (1987)\t1987\t[\"Comedy\",\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2287\t3\t957748220\tThem! (1954)\t1954\t[\"Sci-Fi\",\"Thriller\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t3334\t5\t957747068\tKey Largo (1948)\t1948\t[\"Crime\",\"Drama\",\"Film-Noir\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1748\t5\t957747301\tDark City (1998)\t1998\t[\"Film-Noir\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t541\t5\t957748220\tBlade Runner (1982)\t1982\t[\"Film-Noir\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1088\t2\t957747789\tDirty Dancing (1987)\t1987\t[\"Musical\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t924\t5\t957748250\t2001: A Space Odyssey (1968)\t1968\t[\"Drama\",\"Mystery\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t293\t4\t957747681\tProfessional, The (a.k.a. Leon: The Professional) (1994)\t\t[\"Crime\",\"Drama\",\"Romance\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t2532\t2\t957748529\tConquest of the Planet of the Apes (1972)\t1972\t[\"Action\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1247\t5\t957747419\tGraduate, The (1967)\t1967\t[\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1260\t4\t957747264\tM (1931)\t1931\t[\"Crime\",\"Film-Noir\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1617\t5\t957747264\tL.A. Confidential (1997)\t1997\t[\"Crime\",\"Film-Noir\",\"Mystery\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t2640\t4\t957748381\tSuperman (1978)\t1978\t[\"Action\",\"Adventure\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t3614\t3\t957747148\tHoneymoon in Vegas (1992)\t1992\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1344\t3\t957747282\tCape Fear (1962)\t1962\t[\"Film-Noir\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t151\t3\t957747716\tRob Roy (1995)\t1995\t[\"Drama\",\"Romance\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t1081\t4\t957747164\tVictor/Victoria (1982)\t1982\t[\"Comedy\",\"Musical\"]\tM\t50-55\t13903\tunemployed\n5853\t1876\t2\t957748528\tDeep Impact (1998)\t1998\t[\"Action\",\"Drama\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1179\t5\t957747301\tGrifters, The (1990)\t1990\t[\"Crime\",\"Drama\",\"Film-Noir\"]\tM\t50-55\t13903\tunemployed\n5853\t2145\t4\t957747855\tPretty in Pink (1986)\t1986\t[\"Comedy\",\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t3501\t1\t957747877\tMurphy's Romance (1985)\t1985\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t316\t3\t957748504\tStargate (1994)\t1994\t[\"Action\",\"Adventure\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t345\t5\t957746933\tAdventures of Priscilla, Queen of the Desert, The (1994)\t1994\t[\"Comedy\",\"Drama\"]\tM\t50-55\t13903\tunemployed\n5853\t1230\t5\t957747419\tAnnie Hall (1977)\t1977\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1267\t5\t957747264\tManchurian Candidate, The (1962)\t1962\t[\"Film-Noir\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t2262\t1\t957747730\tAbout Last Night... (1986)\t1986\t[\"Comedy\",\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2752\t3\t957747194\tOutrageous Fortune (1987)\t1987\t[\"Comedy\",\"Mystery\"]\tM\t50-55\t13903\tunemployed\n5853\t1077\t2\t957748271\tSleeper (1973)\t1973\t[\"Comedy\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t914\t2\t957747618\tMy Fair Lady (1964)\t1964\t[\"Musical\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t223\t5\t957748961\tClerks (1994)\t1994\t[\"Comedy\"]\tM\t50-55\t13903\tunemployed\n5853\t2985\t5\t957748350\tRobocop (1987)\t1987\t[\"Action\",\"Crime\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1270\t5\t957748250\tBack to the Future (1985)\t1985\t[\"Comedy\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t3622\t5\t957747194\tTwelve Chairs, The (1970)\t1970\t[\"Comedy\"]\tM\t50-55\t13903\tunemployed\n5853\t2022\t4\t957747088\tLast Temptation of Christ, The (1988)\t1988\t[\"Drama\"]\tM\t50-55\t13903\tunemployed\n5853\t913\t4\t957747264\tMaltese Falcon, The (1941)\t1941\t[\"Film-Noir\",\"Mystery\"]\tM\t50-55\t13903\tunemployed\n5853\t2248\t5\t957747545\tSay Anything... (1989)\t1989\t[\"Comedy\",\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1396\t2\t957748315\tSneakers (1992)\t1992\t[\"Crime\",\"Drama\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t5\t1\t957747194\tFather of the Bride Part II (1995)\t1995\t[\"Comedy\"]\tM\t50-55\t13903\tunemployed\n5853\t3033\t2\t957747208\tSpaceballs (1987)\t1987\t[\"Comedy\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t915\t3\t957747652\tSabrina (1954)\t1954\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t920\t3\t957746909\tGone with the Wind (1939)\t1939\t[\"Drama\",\"Romance\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t942\t5\t957747301\tLaura (1944)\t1944\t[\"Crime\",\"Film-Noir\",\"Mystery\"]\tM\t50-55\t13903\tunemployed\n5853\t1129\t2\t957748350\tEscape from New York (1981)\t1981\t[\"Action\",\"Adventure\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1197\t5\t957747618\tPrincess Bride, The (1987)\t1987\t[\"Action\",\"Adventure\",\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1924\t4\t957748350\tPlan 9 from Outer Space (1958)\t1958\t[\"Horror\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1200\t4\t957748293\tAliens (1986)\t1986\t[\"Action\",\"Sci-Fi\",\"Thriller\",\"War\"]\tM\t50-55\t13903\tunemployed\n5853\t2657\t2\t957748315\tRocky Horror Picture Show, The (1975)\t1975\t[\"Comedy\",\"Horror\",\"Musical\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1357\t4\t957747730\tShine (1996)\t1996\t[\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2355\t5\t957748961\tBug's Life, A (1998)\t1998\t[\"Animation\",\"Children's\",\"Comedy\"]\tM\t50-55\t13903\tunemployed\n5853\t2396\t3\t957747386\tShakespeare in Love (1998)\t1998\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t2020\t2\t957747492\tDangerous Liaisons (1988)\t1988\t[\"Drama\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t900\t2\t957747545\tAmerican in Paris, An (1951)\t1951\t[\"Musical\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t968\t3\t957748504\tNight of the Living Dead (1968)\t1968\t[\"Horror\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t2478\t1\t957746967\tThree Amigos! (1986)\t1986\t[\"Comedy\",\"Western\"]\tM\t50-55\t13903\tunemployed\n5853\t2100\t3\t957747652\tSplash (1984)\t1984\t[\"Comedy\",\"Fantasy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1175\t3\t957748250\tDelicatessen (1991)\t1991\t[\"Comedy\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t2571\t4\t957748271\tMatrix, The (1999)\t1999\t[\"Action\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1921\t4\t957748448\tPi (1998)\t1998\t[\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t32\t5\t957748293\tTwelve Monkeys (1995)\t1995\t[\"Drama\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t2987\t2\t957747301\tWho Framed Roger Rabbit? (1988)\t1988\t[\"Adventure\",\"Animation\",\"Film-Noir\"]\tM\t50-55\t13903\tunemployed\n5853\t1252\t5\t957747264\tChinatown (1974)\t1974\t[\"Film-Noir\",\"Mystery\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t1674\t3\t957747545\tWitness (1985)\t1985\t[\"Drama\",\"Romance\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t2710\t3\t957748961\tBlair Witch Project, The (1999)\t1999\t[\"Horror\"]\tM\t50-55\t13903\tunemployed\n5853\t2011\t3\t957748413\tBack to the Future Part II (1989)\t1989\t[\"Comedy\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t2469\t4\t957747789\tPeggy Sue Got Married (1986)\t1986\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1917\t2\t957748585\tArmageddon (1998)\t1998\t[\"Action\",\"Adventure\",\"Sci-Fi\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t3524\t3\t957747855\tArthur (1981)\t1981\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t480\t3\t957748328\tJurassic Park (1993)\t1993\t[\"Action\",\"Adventure\",\"Sci-Fi\"]\tM\t50-55\t13903\tunemployed\n5853\t1307\t4\t957747636\tWhen Harry Met Sally... (1989)\t1989\t[\"Comedy\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1380\t2\t957747877\tGrease (1978)\t1978\t[\"Comedy\",\"Musical\",\"Romance\"]\tM\t50-55\t13903\tunemployed\n5853\t1783\t1\t957747313\tPalmetto (1998)\t1998\t[\"Film-Noir\",\"Mystery\",\"Thriller\"]\tM\t50-55\t13903\tunemployed\n5853\t2000\t2\t957746967\tLethal Weapon (1987)\t1987\t[\"Action\",\"Comedy\",\"Crime\",\"Drama\"]\tM\t50-55\t13903\tunemployed\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304852572_1669912465",
+      "id": "paragraph_1739304852572_1669912465",
+      "dateCreated": "2025-02-11T20:14:12+0000",
+      "dateStarted": "2025-02-11T20:21:23+0000",
+      "dateFinished": "2025-02-11T20:21:24+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47866"
+    },
+    {
+      "text": "%hive\n-- explode single row with list of genres into multiple row with on egenre each\n\n-- DROP TABLE IF EXISTS RMUdataExplode\n\nCREATE TABLE RMUdataExplode AS\nSELECT userid, movieid, rating ,tstamp, title, year, genre, gender, agerange,\nzipcode, occupation\nFROM RMUdata LATERAL VIEW EXPLODE(genres) genres AS genre;\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:23:42+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211202342_f1036263-9f3e-4bb1-86a8-b4e02aada3f3): \n\n\n\n\nCREATE TABLE RMUdataExplode AS\nSELECT userid, movieid, rating ,tstamp, title, year, genre, gender, agerange,\nzipcode, occupation\nFROM RMUdata LATERAL VIEW EXPLODE(genres) genres AS genre\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:userid, type:int, comment:null), FieldSchema(name:movieid, type:int, comment:null), FieldSchema(name:rating, type:int, comment:null), FieldSchema(name:tstamp, type:string, comment:null), FieldSchema(name:title, type:string, comment:null), FieldSchema(name:year, type:string, comment:null), FieldSchema(name:genre, type:string, comment:null), FieldSchema(name:gender, type:string, comment:null), FieldSchema(name:agerange, type:string, comment:null), FieldSchema(name:zipcode, type:string, comment:null), FieldSchema(name:occupation, type:string, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211202342_f1036263-9f3e-4bb1-86a8-b4e02aada3f3); Time taken: 0.172 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20250211202342_f1036263-9f3e-4bb1-86a8-b4e02aada3f3): \n\n\n\n\nCREATE TABLE RMUdataExplode AS\nSELECT userid, movieid, rating ,tstamp, title, year, genre, gender, agerange,\nzipcode, occupation\nFROM RMUdata LATERAL VIEW EXPLODE(genres) genres AS genre\nINFO  : Query ID = hive_20250211202342_f1036263-9f3e-4bb1-86a8-b4e02aada3f3\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20250211202342_f1036263-9f3e-4bb1-86a8-b4e02aada3f3\nINFO  : Tez session hasn't been created yet. Opening session\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739304879789_48037943",
+      "id": "paragraph_1739304879789_48037943",
+      "dateCreated": "2025-02-11T20:14:39+0000",
+      "dateStarted": "2025-02-11T20:23:42+0000",
+      "dateFinished": "2025-02-11T20:24:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47867"
+    },
+    {
+      "text": "%hive\n-- display a sample of rows\nSELECT * FROM RMUdataExplode LIMIT 100;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:24:27+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "userid": "string",
+                      "movieid": "string",
+                      "rating": "string",
+                      "tstamp": "string",
+                      "title": "string",
+                      "year": "string",
+                      "genre": "string",
+                      "gender": "string",
+                      "agerange": "string",
+                      "zipcode": "string",
+                      "occupation": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "userid\tmovieid\trating\ttstamp\ttitle\tyear\tgenre\tgender\tagerange\tzipcode\toccupation\n5853\t2054\t1\t957748528\tHoney, I Shrunk the Kids (1989)\t1989\tAdventure\tM\t50-55\t13903\tunemployed\n5853\t2054\t1\t957748528\tHoney, I Shrunk the Kids (1989)\t1989\tChildren's\tM\t50-55\t13903\tunemployed\n5853\t2054\t1\t957748528\tHoney, I Shrunk the Kids (1989)\t1989\tComedy\tM\t50-55\t13903\tunemployed\n5853\t2054\t1\t957748528\tHoney, I Shrunk the Kids (1989)\t1989\tFantasy\tM\t50-55\t13903\tunemployed\n5853\t2054\t1\t957748528\tHoney, I Shrunk the Kids (1989)\t1989\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t2454\t4\t957748350\tFly, The (1958)\t1958\tHorror\tM\t50-55\t13903\tunemployed\n5853\t2454\t4\t957748350\tFly, The (1958)\t1958\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t249\t4\t957746967\tImmortal Beloved (1994)\t1994\tDrama\tM\t50-55\t13903\tunemployed\n5853\t249\t4\t957746967\tImmortal Beloved (1994)\t1994\tRomance\tM\t50-55\t13903\tunemployed\n5853\t2108\t4\t957747702\tL.A. Story (1991)\t1991\tComedy\tM\t50-55\t13903\tunemployed\n5853\t2108\t4\t957747702\tL.A. Story (1991)\t1991\tRomance\tM\t50-55\t13903\tunemployed\n5853\t1199\t5\t957748220\tBrazil (1985)\t1985\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1580\t3\t957748293\tMen in Black (1997)\t1997\tAction\tM\t50-55\t13903\tunemployed\n5853\t1580\t3\t957748293\tMen in Black (1997)\t1997\tAdventure\tM\t50-55\t13903\tunemployed\n5853\t1580\t3\t957748293\tMen in Black (1997)\t1997\tComedy\tM\t50-55\t13903\tunemployed\n5853\t1580\t3\t957748293\tMen in Black (1997)\t1997\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t3543\t3\t957747068\tDiner (1982)\t1982\tComedy\tM\t50-55\t13903\tunemployed\n5853\t3543\t3\t957747068\tDiner (1982)\t1982\tDrama\tM\t50-55\t13903\tunemployed\n5853\t356\t3\t957747763\tForrest Gump (1994)\t1994\tComedy\tM\t50-55\t13903\tunemployed\n5853\t356\t3\t957747763\tForrest Gump (1994)\t1994\tRomance\tM\t50-55\t13903\tunemployed\n5853\t356\t3\t957747763\tForrest Gump (1994)\t1994\tWar\tM\t50-55\t13903\tunemployed\n5853\t1210\t2\t957746933\tStar Wars: Episode VI - Return of the Jedi (1983)\t1983\tAction\tM\t50-55\t13903\tunemployed\n5853\t1210\t2\t957746933\tStar Wars: Episode VI - Return of the Jedi (1983)\t1983\tAdventure\tM\t50-55\t13903\tunemployed\n5853\t1210\t2\t957746933\tStar Wars: Episode VI - Return of the Jedi (1983)\t1983\tRomance\tM\t50-55\t13903\tunemployed\n5853\t1210\t2\t957746933\tStar Wars: Episode VI - Return of the Jedi (1983)\t1983\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1210\t2\t957746933\tStar Wars: Episode VI - Return of the Jedi (1983)\t1983\tWar\tM\t50-55\t13903\tunemployed\n5853\t1214\t5\t957748250\tAlien (1979)\t1979\tAction\tM\t50-55\t13903\tunemployed\n5853\t1214\t5\t957748250\tAlien (1979)\t1979\tHorror\tM\t50-55\t13903\tunemployed\n5853\t1214\t5\t957748250\tAlien (1979)\t1979\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1214\t5\t957748250\tAlien (1979)\t1979\tThriller\tM\t50-55\t13903\tunemployed\n5853\t1240\t5\t957748315\tTerminator, The (1984)\t1984\tAction\tM\t50-55\t13903\tunemployed\n5853\t1240\t5\t957748315\tTerminator, The (1984)\t1984\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1240\t5\t957748315\tTerminator, The (1984)\t1984\tThriller\tM\t50-55\t13903\tunemployed\n5853\t1248\t5\t957747282\tTouch of Evil (1958)\t1958\tCrime\tM\t50-55\t13903\tunemployed\n5853\t1248\t5\t957747282\tTouch of Evil (1958)\t1958\tFilm-Noir\tM\t50-55\t13903\tunemployed\n5853\t1248\t5\t957747282\tTouch of Evil (1958)\t1958\tThriller\tM\t50-55\t13903\tunemployed\n5853\t1265\t4\t957747526\tGroundhog Day (1993)\t1993\tComedy\tM\t50-55\t13903\tunemployed\n5853\t1265\t4\t957747526\tGroundhog Day (1993)\t1993\tRomance\tM\t50-55\t13903\tunemployed\n5853\t1281\t5\t957747131\tGreat Dictator, The (1940)\t1940\tComedy\tM\t50-55\t13903\tunemployed\n5853\t750\t5\t957748220\tDr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)\t1963\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t750\t5\t957748220\tDr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)\t1963\tWar\tM\t50-55\t13903\tunemployed\n5853\t1680\t1\t957747636\tSliding Doors (1998)\t1998\tDrama\tM\t50-55\t13903\tunemployed\n5853\t1680\t1\t957747636\tSliding Doors (1998)\t1998\tRomance\tM\t50-55\t13903\tunemployed\n5853\t2692\t5\t957747436\tRun Lola Run (Lola rennt) (1998)\t\tAction\tM\t50-55\t13903\tunemployed\n5853\t2692\t5\t957747436\tRun Lola Run (Lola rennt) (1998)\t\tCrime\tM\t50-55\t13903\tunemployed\n5853\t2692\t5\t957747436\tRun Lola Run (Lola rennt) (1998)\t\tRomance\tM\t50-55\t13903\tunemployed\n5853\t2364\t3\t957748470\tGodzilla (Gojira) (1984)\t\tAction\tM\t50-55\t13903\tunemployed\n5853\t2364\t3\t957748470\tGodzilla (Gojira) (1984)\t\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t899\t1\t957747418\tSingin' in the Rain (1952)\t1952\tMusical\tM\t50-55\t13903\tunemployed\n5853\t899\t1\t957747418\tSingin' in the Rain (1952)\t1952\tRomance\tM\t50-55\t13903\tunemployed\n5853\t2010\t5\t957748220\tMetropolis (1926)\t1926\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t912\t4\t957747386\tCasablanca (1942)\t1942\tDrama\tM\t50-55\t13903\tunemployed\n5853\t912\t4\t957747386\tCasablanca (1942)\t1942\tRomance\tM\t50-55\t13903\tunemployed\n5853\t912\t4\t957747386\tCasablanca (1942)\t1942\tWar\tM\t50-55\t13903\tunemployed\n5853\t1196\t5\t957748250\tStar Wars: Episode V - The Empire Strikes Back (1980)\t1980\tAction\tM\t50-55\t13903\tunemployed\n5853\t1196\t5\t957748250\tStar Wars: Episode V - The Empire Strikes Back (1980)\t1980\tAdventure\tM\t50-55\t13903\tunemployed\n5853\t1196\t5\t957748250\tStar Wars: Episode V - The Empire Strikes Back (1980)\t1980\tDrama\tM\t50-55\t13903\tunemployed\n5853\t1196\t5\t957748250\tStar Wars: Episode V - The Empire Strikes Back (1980)\t1980\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1196\t5\t957748250\tStar Wars: Episode V - The Empire Strikes Back (1980)\t1980\tWar\tM\t50-55\t13903\tunemployed\n5853\t2186\t5\t957747282\tStrangers on a Train (1951)\t1951\tFilm-Noir\tM\t50-55\t13903\tunemployed\n5853\t2186\t5\t957747282\tStrangers on a Train (1951)\t1951\tThriller\tM\t50-55\t13903\tunemployed\n5853\t2529\t3\t957748395\tPlanet of the Apes (1968)\t1968\tAction\tM\t50-55\t13903\tunemployed\n5853\t2529\t3\t957748395\tPlanet of the Apes (1968)\t1968\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1408\t4\t957747877\tLast of the Mohicans, The (1992)\t1992\tAction\tM\t50-55\t13903\tunemployed\n5853\t1408\t4\t957747877\tLast of the Mohicans, The (1992)\t1992\tRomance\tM\t50-55\t13903\tunemployed\n5853\t1408\t4\t957747877\tLast of the Mohicans, The (1992)\t1992\tWar\tM\t50-55\t13903\tunemployed\n5853\t2065\t3\t957747636\tPurple Rose of Cairo, The (1985)\t1985\tComedy\tM\t50-55\t13903\tunemployed\n5853\t2065\t3\t957747636\tPurple Rose of Cairo, The (1985)\t1985\tDrama\tM\t50-55\t13903\tunemployed\n5853\t2065\t3\t957747636\tPurple Rose of Cairo, The (1985)\t1985\tRomance\tM\t50-55\t13903\tunemployed\n5853\t3099\t3\t957747618\tShampoo (1975)\t1975\tComedy\tM\t50-55\t13903\tunemployed\n5853\t3099\t3\t957747618\tShampoo (1975)\t1975\tRomance\tM\t50-55\t13903\tunemployed\n5853\t1286\t1\t957747813\tSomewhere in Time (1980)\t1980\tDrama\tM\t50-55\t13903\tunemployed\n5853\t1286\t1\t957747813\tSomewhere in Time (1980)\t1980\tRomance\tM\t50-55\t13903\tunemployed\n5853\t2243\t5\t957747511\tBroadcast News (1987)\t1987\tComedy\tM\t50-55\t13903\tunemployed\n5853\t2243\t5\t957747511\tBroadcast News (1987)\t1987\tDrama\tM\t50-55\t13903\tunemployed\n5853\t2243\t5\t957747511\tBroadcast News (1987)\t1987\tRomance\tM\t50-55\t13903\tunemployed\n5853\t2287\t3\t957748220\tThem! (1954)\t1954\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t2287\t3\t957748220\tThem! (1954)\t1954\tThriller\tM\t50-55\t13903\tunemployed\n5853\t2287\t3\t957748220\tThem! (1954)\t1954\tWar\tM\t50-55\t13903\tunemployed\n5853\t3334\t5\t957747068\tKey Largo (1948)\t1948\tCrime\tM\t50-55\t13903\tunemployed\n5853\t3334\t5\t957747068\tKey Largo (1948)\t1948\tDrama\tM\t50-55\t13903\tunemployed\n5853\t3334\t5\t957747068\tKey Largo (1948)\t1948\tFilm-Noir\tM\t50-55\t13903\tunemployed\n5853\t3334\t5\t957747068\tKey Largo (1948)\t1948\tThriller\tM\t50-55\t13903\tunemployed\n5853\t1748\t5\t957747301\tDark City (1998)\t1998\tFilm-Noir\tM\t50-55\t13903\tunemployed\n5853\t1748\t5\t957747301\tDark City (1998)\t1998\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1748\t5\t957747301\tDark City (1998)\t1998\tThriller\tM\t50-55\t13903\tunemployed\n5853\t541\t5\t957748220\tBlade Runner (1982)\t1982\tFilm-Noir\tM\t50-55\t13903\tunemployed\n5853\t541\t5\t957748220\tBlade Runner (1982)\t1982\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t1088\t2\t957747789\tDirty Dancing (1987)\t1987\tMusical\tM\t50-55\t13903\tunemployed\n5853\t1088\t2\t957747789\tDirty Dancing (1987)\t1987\tRomance\tM\t50-55\t13903\tunemployed\n5853\t924\t5\t957748250\t2001: A Space Odyssey (1968)\t1968\tDrama\tM\t50-55\t13903\tunemployed\n5853\t924\t5\t957748250\t2001: A Space Odyssey (1968)\t1968\tMystery\tM\t50-55\t13903\tunemployed\n5853\t924\t5\t957748250\t2001: A Space Odyssey (1968)\t1968\tSci-Fi\tM\t50-55\t13903\tunemployed\n5853\t924\t5\t957748250\t2001: A Space Odyssey (1968)\t1968\tThriller\tM\t50-55\t13903\tunemployed\n5853\t293\t4\t957747681\tProfessional, The (a.k.a. Leon: The Professional) (1994)\t\tCrime\tM\t50-55\t13903\tunemployed\n5853\t293\t4\t957747681\tProfessional, The (a.k.a. Leon: The Professional) (1994)\t\tDrama\tM\t50-55\t13903\tunemployed\n5853\t293\t4\t957747681\tProfessional, The (a.k.a. Leon: The Professional) (1994)\t\tRomance\tM\t50-55\t13903\tunemployed\n5853\t293\t4\t957747681\tProfessional, The (a.k.a. Leon: The Professional) (1994)\t\tThriller\tM\t50-55\t13903\tunemployed\n5853\t2532\t2\t957748529\tConquest of the Planet of the Apes (1972)\t1972\tAction\tM\t50-55\t13903\tunemployed\n5853\t2532\t2\t957748529\tConquest of the Planet of the Apes (1972)\t1972\tSci-Fi\tM\t50-55\t13903\tunemployed\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739305422331_694221059",
+      "id": "paragraph_1739305422331_694221059",
+      "dateCreated": "2025-02-11T20:23:42+0000",
+      "dateStarted": "2025-02-11T20:24:24+0000",
+      "dateFinished": "2025-02-11T20:24:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47868"
+    },
+    {
+      "text": "%hive\n-- 10 best-rated movies (on average) with more than 1000 ratings\nSELECT title, AVG(rating) AS avgRating\nFROM RMUdata\nGROUP BY movieid, title\nHAVING COUNT(rating) > 1000\nORDER BY avgRating DESC\nLIMIT 10;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:27:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "title": "string",
+                      "avgrating": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211202705_873338b8-7385-4c3c-aed4-8c79e97a1faa): \n\nSELECT title, AVG(rating) AS avgRating\nFROM RMUdata\nGROUP BY movieid, title\nHAVING COUNT(rating) > 1000\nORDER BY avgRating DESC\nLIMIT 10\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:title, type:string, comment:null), FieldSchema(name:avgrating, type:double, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211202705_873338b8-7385-4c3c-aed4-8c79e97a1faa); Time taken: 0.48 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20250211202705_873338b8-7385-4c3c-aed4-8c79e97a1faa): \n\nSELECT title, AVG(rating) AS avgRating\nFROM RMUdata\nGROUP BY movieid, title\nHAVING COUNT(rating) > 1000\nORDER BY avgRating DESC\nLIMIT 10\nINFO  : Query ID = hive_20250211202705_873338b8-7385-4c3c-aed4-8c79e97a1faa\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20250211202705_873338b8-7385-4c3c-aed4-8c79e97a1faa\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "title\tavgrating\nShawshank Redemption, The (1994)\t4.554557700942973\nGodfather, The (1972)\t4.524966261808367\nUsual Suspects, The (1995)\t4.517106001121705\nSchindler's List (1993)\t4.510416666666667\nRaiders of the Lost Ark (1981)\t4.477724741447892\nRear Window (1954)\t4.476190476190476\nStar Wars: Episode IV - A New Hope (1977)\t4.453694416583082\nDr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)\t4.4498902706656915\nCasablanca (1942)\t4.412822049131217\nSixth Sense, The (1999)\t4.406262708418057\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739305464782_2127105677",
+      "id": "paragraph_1739305464782_2127105677",
+      "dateCreated": "2025-02-11T20:24:24+0000",
+      "dateStarted": "2025-02-11T20:27:05+0000",
+      "dateFinished": "2025-02-11T20:27:41+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47869"
+    },
+    {
+      "text": "%hive\n-- 10 best-rated Sci-Fi movies (on average) with more than 1000 ratings\nSELECT title, AVG(rating) AS avgRating\nFROM RMUdata\nWHERE ARRAY_CONTAINS(genres,\"Sci-Fi\")\nGROUP BY movieid, title\nHAVING COUNT(rating) > 1000\nORDER BY avgRating DESC\nLIMIT 10;",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:30:48+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "title": "string",
+                      "avgrating": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211203013_ae6889a1-83bd-41f9-ade1-8fbfcef65667): \n\nSELECT title, AVG(rating) AS avgRating\nFROM RMUdata\nWHERE ARRAY_CONTAINS(genres,\"Sci-Fi\")\nGROUP BY movieid, title\nHAVING COUNT(rating) > 1000\nORDER BY avgRating DESC\nLIMIT 10\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:title, type:string, comment:null), FieldSchema(name:avgrating, type:double, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211203013_ae6889a1-83bd-41f9-ade1-8fbfcef65667); Time taken: 0.288 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20250211203013_ae6889a1-83bd-41f9-ade1-8fbfcef65667): \n\nSELECT title, AVG(rating) AS avgRating\nFROM RMUdata\nWHERE ARRAY_CONTAINS(genres,\"Sci-Fi\")\nGROUP BY movieid, title\nHAVING COUNT(rating) > 1000\nORDER BY avgRating DESC\nLIMIT 10\nINFO  : Query ID = hive_20250211203013_ae6889a1-83bd-41f9-ade1-8fbfcef65667\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20250211203013_ae6889a1-83bd-41f9-ade1-8fbfcef65667\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "title\tavgrating\nStar Wars: Episode IV - A New Hope (1977)\t4.453694416583082\nDr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)\t4.4498902706656915\nMatrix, The (1999)\t4.315830115830116\nStar Wars: Episode V - The Empire Strikes Back (1980)\t4.292976588628763\nBlade Runner (1982)\t4.273333333333333\nAlien (1979)\t4.159584980237154\nTerminator, The (1984)\t4.152049571020019\nAliens (1986)\t4.125824175824176\nClockwork Orange, A (1971)\t4.0781122864117165\n2001: A Space Odyssey (1968)\t4.068764568764569\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739305606859_1614542727",
+      "id": "paragraph_1739305606859_1614542727",
+      "dateCreated": "2025-02-11T20:26:46+0000",
+      "dateStarted": "2025-02-11T20:30:13+0000",
+      "dateFinished": "2025-02-11T20:30:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47870"
+    },
+    {
+      "text": "%hive\n-- visualize number of movies since 1980 in each genre\nSELECT genre, year, COUNT(DISTINCT movieid) AS numMovies\nFROM RMUdataExplode\nWHERE year>=1980\nGROUP BY genre, year;\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:33:46+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "lineChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "genre": "string",
+                      "year": "string",
+                      "nummovies": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "year",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [
+                {
+                  "name": "genre",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "nummovies",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20250211203208_ba688138-f6cc-46e5-b1e7-c869711ba7c8): \n\nSELECT genre, year, COUNT(DISTINCT movieid) AS numMovies\nFROM RMUdataExplode\nWHERE year>=1980\nGROUP BY genre, year\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:genre, type:string, comment:null), FieldSchema(name:year, type:string, comment:null), FieldSchema(name:nummovies, type:bigint, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20250211203208_ba688138-f6cc-46e5-b1e7-c869711ba7c8); Time taken: 0.369 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20250211203208_ba688138-f6cc-46e5-b1e7-c869711ba7c8): \n\nSELECT genre, year, COUNT(DISTINCT movieid) AS numMovies\nFROM RMUdataExplode\nWHERE year>=1980\nGROUP BY genre, year\nINFO  : Query ID = hive_20250211203208_ba688138-f6cc-46e5-b1e7-c869711ba7c8\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20250211203208_ba688138-f6cc-46e5-b1e7-c869711ba7c8\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "genre\tyear\tnummovies\nAction\t1980\t5\nAdventure\t1980\t6\nChildren's\t1980\t1\nComedy\t1980\t13\nCrime\t1980\t1\nDrama\t1980\t18\nHorror\t1980\t8\nMusical\t1980\t2\nRomance\t1980\t4\nSci-Fi\t1980\t3\nThriller\t1980\t1\nWar\t1980\t4\nAction\t1981\t10\nAdventure\t1981\t7\nAnimation\t1981\t3\nChildren's\t1981\t3\nComedy\t1981\t9\nCrime\t1981\t2\nDocumentary\t1981\t1\nDrama\t1981\t13\nFantasy\t1981\t2\nHorror\t1981\t8\nMusical\t1981\t1\nMystery\t1981\t1\nRomance\t1981\t3\nSci-Fi\t1981\t3\nThriller\t1981\t5\nWar\t1981\t1\nAction\t1982\t7\nAdventure\t1982\t4\nAnimation\t1982\t1\nChildren's\t1982\t3\nComedy\t1982\t11\nCrime\t1982\t1\nDocumentary\t1982\t1\nDrama\t1982\t16\nFantasy\t1982\t3\nFilm-Noir\t1982\t1\nHorror\t1982\t9\nMusical\t1982\t3\nRomance\t1982\t2\nSci-Fi\t1982\t8\nThriller\t1982\t3\nWar\t1982\t1\nAction\t1983\t4\nAdventure\t1983\t2\nChildren's\t1983\t1\nComedy\t1983\t14\nDocumentary\t1983\t1\nDrama\t1983\t11\nHorror\t1983\t11\nRomance\t1983\t3\nSci-Fi\t1983\t2\nThriller\t1983\t4\nWar\t1983\t2\nAction\t1984\t10\nAdventure\t1984\t8\nChildren's\t1984\t2\nComedy\t1984\t16\nCrime\t1984\t2\nDocumentary\t1984\t1\nDrama\t1984\t23\nFantasy\t1984\t4\nFilm-Noir\t1984\t1\nHorror\t1984\t7\nMusical\t1984\t1\nMystery\t1984\t2\nRomance\t1984\t6\nSci-Fi\t1984\t12\nThriller\t1984\t6\nWar\t1984\t4\nAction\t1985\t11\nAdventure\t1985\t13\nAnimation\t1985\t1\nChildren's\t1985\t6\nComedy\t1985\t22\nDrama\t1985\t19\nFantasy\t1985\t6\nHorror\t1985\t8\nMystery\t1985\t3\nRomance\t1985\t10\nSci-Fi\t1985\t8\nThriller\t1985\t3\nWar\t1985\t3\nWestern\t1985\t1\nAction\t1986\t20\nAdventure\t1986\t13\nAnimation\t1986\t3\nChildren's\t1986\t7\nComedy\t1986\t36\nCrime\t1986\t3\nDrama\t1986\t33\nFantasy\t1986\t2\nHorror\t1986\t19\nMusical\t1986\t1\nMystery\t1986\t4\nRomance\t1986\t8\nSci-Fi\t1986\t7\nThriller\t1986\t12\nWar\t1986\t5\nWestern\t1986\t1\nAction\t1987\t16\nAdventure\t1987\t7\nChildren's\t1987\t2\nComedy\t1987\t26\nCrime\t1987\t5\nDrama\t1987\t18\nFantasy\t1987\t2\nFilm-Noir\t1987\t1\nHorror\t1987\t14\nMusical\t1987\t1\nMystery\t1987\t2\nRomance\t1987\t7\nSci-Fi\t1987\t6\nThriller\t1987\t7\nWar\t1987\t3\nAction\t1988\t13\nAdventure\t1988\t8\nAnimation\t1988\t3\nChildren's\t1988\t1\nComedy\t1988\t23\nCrime\t1988\t2\nDocumentary\t1988\t3\nDrama\t1988\t19\nFantasy\t1988\t4\nFilm-Noir\t1988\t1\nHorror\t1988\t10\nMusical\t1988\t1\nRomance\t1988\t4\nSci-Fi\t1988\t6\nThriller\t1988\t8\nWar\t1988\t3\nWestern\t1988\t1\nAction\t1989\t8\nAdventure\t1989\t8\nAnimation\t1989\t2\nChildren's\t1989\t5\nComedy\t1989\t23\nCrime\t1989\t4\nDocumentary\t1989\t2\nDrama\t1989\t21\nFantasy\t1989\t1\nHorror\t1989\t11\nMusical\t1989\t1\nRomance\t1989\t4\nSci-Fi\t1989\t7\nThriller\t1989\t4\nWar\t1989\t2\nAction\t1990\t17\nAdventure\t1990\t4\nAnimation\t1990\t2\nChildren's\t1990\t4\nComedy\t1990\t20\nCrime\t1990\t7\nDocumentary\t1990\t2\nDrama\t1990\t24\nFantasy\t1990\t2\nFilm-Noir\t1990\t1\nHorror\t1990\t16\nMystery\t1990\t1\nRomance\t1990\t10\nSci-Fi\t1990\t6\nThriller\t1990\t13\nWestern\t1990\t3\nAction\t1991\t6\nAdventure\t1991\t4\nAnimation\t1991\t2\nChildren's\t1991\t3\nComedy\t1991\t23\nCrime\t1991\t1\nDocumentary\t1991\t1\nDrama\t1991\t21\nFantasy\t1991\t3\nHorror\t1991\t3\nMusical\t1991\t2\nMystery\t1991\t4\nRomance\t1991\t8\nSci-Fi\t1991\t5\nThriller\t1991\t7\nWar\t1991\t1\nAction\t1992\t18\nAdventure\t1992\t3\nAnimation\t1992\t3\nChildren's\t1992\t7\nComedy\t1992\t33\nCrime\t1992\t8\nDocumentary\t1992\t1\nDrama\t1992\t32\nFantasy\t1992\t1\nHorror\t1992\t12\nMusical\t1992\t3\nMystery\t1992\t2\nRomance\t1992\t12\nSci-Fi\t1992\t8\nThriller\t1992\t14\nWar\t1992\t3\nWestern\t1992\t1\nAction\t1993\t24\nAdventure\t1993\t10\nAnimation\t1993\t4\nChildren's\t1993\t12\nComedy\t1993\t42\nCrime\t1993\t7\nDocumentary\t1993\t2\nDrama\t1993\t71\nFantasy\t1993\t2\nFilm-Noir\t1993\t1\nHorror\t1993\t8\nMusical\t1993\t3\nMystery\t1993\t7\nRomance\t1993\t18\nSci-Fi\t1993\t10\nThriller\t1993\t22\nWar\t1993\t5\nWestern\t1993\t2\nAction\t1994\t30\nAdventure\t1994\t15\nAnimation\t1994\t5\nChildren's\t1994\t20\nComedy\t1994\t86\nCrime\t1994\t7\nDocumentary\t1994\t10\nDrama\t1994\t100\nFantasy\t1994\t5\nHorror\t1994\t12\nMusical\t1994\t2\nMystery\t1994\t3\nRomance\t1994\t33\nSci-Fi\t1994\t8\nThriller\t1994\t26\nWar\t1994\t7\nWestern\t1994\t6\nAction\t1995\t44\nAdventure\t1995\t25\nAnimation\t1995\t7\nChildren's\t1995\t22\nComedy\t1995\t78\nCrime\t1995\t15\nDocumentary\t1995\t19\nDrama\t1995\t126\nFantasy\t1995\t4\nFilm-Noir\t1995\t1\nHorror\t1995\t15\nMusical\t1995\t4\nMystery\t1995\t7\nRomance\t1995\t46\nSci-Fi\t1995\t17\nThriller\t1995\t41\nWar\t1995\t9\nWestern\t1995\t4\nAction\t1996\t32\nAdventure\t1996\t22\nAnimation\t1996\t7\nChildren's\t1996\t20\nComedy\t1996\t103\nCrime\t1996\t19\nDocumentary\t1996\t13\nDrama\t1996\t122\nFantasy\t1996\t5\nFilm-Noir\t1996\t2\nHorror\t1996\t12\nMusical\t1996\t7\nMystery\t1996\t5\nRomance\t1996\t41\nSci-Fi\t1996\t13\nThriller\t1996\t42\nWar\t1996\t6\nWestern\t1996\t1\nAction\t1997\t42\nAdventure\t1997\t21\nAnimation\t1997\t5\nChildren's\t1997\t21\nComedy\t1997\t91\nCrime\t1997\t26\nDocumentary\t1997\t11\nDrama\t1997\t118\nFantasy\t1997\t6\nFilm-Noir\t1997\t2\nHorror\t1997\t10\nMusical\t1997\t5\nMystery\t1997\t15\nRomance\t1997\t46\nSci-Fi\t1997\t16\nThriller\t1997\t55\nWar\t1997\t10\nAction\t1998\t42\nAdventure\t1998\t16\nAnimation\t1998\t8\nChildren's\t1998\t18\nComedy\t1998\t101\nCrime\t1998\t21\nDocumentary\t1998\t15\nDrama\t1998\t129\nFantasy\t1998\t2\nFilm-Noir\t1998\t3\nHorror\t1998\t15\nMusical\t1998\t3\nMystery\t1998\t9\nRomance\t1998\t51\nSci-Fi\t1998\t16\nThriller\t1998\t51\nWar\t1998\t5\nWestern\t1998\t1\nAction\t1999\t24\nAdventure\t1999\t5\nAnimation\t1999\t7\nChildren's\t1999\t11\nComedy\t1999\t97\nCrime\t1999\t12\nDocumentary\t1999\t11\nDrama\t1999\t110\nFantasy\t1999\t2\nHorror\t1999\t14\nMusical\t1999\t1\nMystery\t1999\t5\nRomance\t1999\t32\nSci-Fi\t1999\t14\nThriller\t1999\t39\nWar\t1999\t4\nWestern\t1999\t1\nAction\t2000\t19\nAdventure\t2000\t6\nAnimation\t2000\t8\nChildren's\t2000\t9\nComedy\t2000\t68\nCrime\t2000\t8\nDocumentary\t2000\t7\nDrama\t2000\t52\nFantasy\t2000\t1\nHorror\t2000\t7\nMusical\t2000\t1\nMystery\t2000\t1\nRomance\t2000\t15\nSci-Fi\t2000\t10\nThriller\t2000\t24\nWar\t2000\t1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739305813275_1633853664",
+      "id": "paragraph_1739305813275_1633853664",
+      "dateCreated": "2025-02-11T20:30:13+0000",
+      "dateStarted": "2025-02-11T20:32:07+0000",
+      "dateFinished": "2025-02-11T20:32:51+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:47871"
+    },
+    {
+      "text": "%hive\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-02-11T20:32:07+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1739305927879_1497909124",
+      "id": "paragraph_1739305927879_1497909124",
+      "dateCreated": "2025-02-11T20:32:07+0000",
+      "status": "READY",
+      "$$hashKey": "object:47872"
+    }
+  ],
+  "name": "Data Munging",
+  "id": "2KMH56HAU",
+  "defaultInterpreterGroup": "hive",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Data Munging"
+}
