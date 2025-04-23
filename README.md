@@ -24,5 +24,17 @@ A multi-stage recommendation system project for CIS 415 focused on building a sc
 - `Assignment_5_GCP_notebook.ipynb`: Intermediate steps
 - `Data_Munging_2KMH56HAU.zpln`: Raw data transformation logic
 
+## 📂 Data Files
+The following datasets are used in this project and are available in the root directory:
+
+- `ratings.csv`
+- `movie_ratings(1).csv`
+- `missionImpossible_ratings.csv`
+- `data_for_GCP_labs.csv`
+
+These CSV files were used throughout different stages of the project for user behavior analysis, collaborative filtering, and GCP-based processing with PySpark. The datasets were either created or accessed during CIS 415 lab assignments.
+
+
+
 ## 📌 Notes
 This project was completed for Arizona State University's CIS 415 course on Big Data & AI in Business.
