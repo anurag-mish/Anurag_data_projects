@@ -1,25 +1,28 @@
-# Movie Ratings Recommendation Project 🎬
+# Movie Recommendation System – GCP + PySpark
 
-This project implements a K-Nearest Neighbors (KNN)-based collaborative filtering model to recommend movies based on user similarity. The analysis is done using PySpark on Google Colab and data pulled from Google Cloud Platform (GCP) storage.
+A multi-stage recommendation system project for CIS 415 focused on building a scalable pipeline for collaborative filtering using user rating data. The pipeline includes data cleaning, Google Cloud integration, and a PySpark-based KNN similarity model.
 
-## 🔧 Tools & Technologies
+## 🚀 Tech Stack
 - Python
 - PySpark
 - Google Cloud Platform (GCP)
 - Google Colab
 - Pandas
-- Pearson Correlation Coefficient
 
-## 📊 Project Highlights
-- Uploaded large-scale user rating data to GCP and accessed it via PySpark on Colab.
-- Cleaned and transformed user data using Python dictionaries and pandas.
-- Computed similarity between users using Pearson correlation to build a recommender.
-- Filtered recommendations using statistical significance (p < 0.05).
-- Extracted key behavior patterns and preference trends.
+## 🔄 Workflow Overview
+1. **Data Cleaning (Assignment 3):** Cleaned raw movie rating data in Colab using pandas and custom functions.
+2. **Cloud Integration (Assignment 4):** Uploaded and accessed data via Google Cloud buckets for distributed processing.
+3. **Processing + Modeling (Assignment 5):**
+   - Computed user-user similarity with **Pearson correlation**.
+   - Filtered statistically significant relationships (p < 0.05).
+   - Built a KNN-based recommender system using PySpark.
 
-## 📁 File
-- `Assignment_5_KNN_Framework.ipynb` — Main notebook with code, pipeline, and results.
+## 📁 Files
+- `Assignment_3_Colab_Framework.ipynb`: Initial data preprocessing
+- `Assignment_4_GCP_Framework.ipynb`: GCP setup and access
+- `Assignment_5_KNN_Framework.ipynb`: Final modeling pipeline
+- `Assignment_5_GCP_notebook.ipynb`: Intermediate steps
+- `Data_Munging_2KMH56HAU.zpln`: Raw data transformation logic
 
----
-
-**Note:** This was part of a CIS 415 coursework project focused on big data analytics and recommendation systems.
+## 📌 Notes
+This project was completed for Arizona State University's CIS 415 course on Big Data & AI in Business.
